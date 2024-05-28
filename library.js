@@ -91,8 +91,9 @@ const addTrack = function(name, artist, album) {
 
 // adds a playlist to the library
 const addPlaylist = function(name) {
-
-}
+  const id = generateUid();
+  library.playlists[id] = { id, name, tracks: [] };
+};
 
 
 // STRETCH:
