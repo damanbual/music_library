@@ -66,8 +66,13 @@ const printPlaylist = function(playlistId) {
 
 // adds an existing track to an existing playlist
 const addTrackToPlaylist = function(trackId, playlistId) {
-
-}
+  const playlist = library.playlists[playlistId];
+  if (playlist && library.tracks[trackId]) {
+    playlist.tracks.push(trackId);
+  } else {
+    console.log("Invalid trackId or playlistId");
+  }
+};
 
 
 // generates a unique id
