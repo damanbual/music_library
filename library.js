@@ -79,13 +79,14 @@ const addTrackToPlaylist = function(trackId, playlistId) {
 // (already implemented: use this for addTrack and addPlaylist)
 const generateUid = function() {
   return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
-}
+};
 
 
 // adds a track to the library
 const addTrack = function(name, artist, album) {
-
-}
+  const id = generateUid();
+  library.tracks[id] = { id, name, artist, album };
+};
 
 
 // adds a playlist to the library
